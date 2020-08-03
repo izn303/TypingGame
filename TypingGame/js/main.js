@@ -25,7 +25,7 @@
     'one more sunshine story',
     'water blue new world',
     'in this unstable world',
-    'pianogorte monologue',
+    'pianoforte monologue',
     'beginners sailing',
     'red gem wink',
     'white first love',
@@ -55,7 +55,8 @@
   const timeLimit = 30 * 1000;
   let startTime;
   let isPlaying = false;
-  var music = new Audio('/Users/itoujun/Desktop/portfolio/JSpractice/TypingGame/handgun-firing1.mp3');
+  var type = new Audio('gun.mp3');
+  var gameover = new Audio('correct.mp3');
   
 
   const target = document.getElementById('target');
@@ -86,7 +87,8 @@
       setTimeout(() =>{
         showResult();
       },100)
-
+      gameover.play(); 
+      gameover.volume = 1.0;
       target.textContent = 'click to replay';
     }
   }
@@ -94,6 +96,7 @@
   function showResult(){
     const accuracy = score + miss === 0 ? 0 :score/ (score + miss) * 100;
     alert(`${score} lettters.${miss}misses. ${accuracy.toFixed(2)}% accuracy!`);
+    
   }
 
   window.addEventListener('click',() => {
@@ -120,9 +123,9 @@
     }
 
     if(e.key === word[loc]){
-      music.play(); 
-      music.currentTime = 0;
-      music.volume = 0.03;
+      type.play(); 
+      type.currentTime = 0;
+      type.volume = 1.0;
 
       console.log('score');
       loc ++;
