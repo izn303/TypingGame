@@ -1,0 +1,53 @@
+body{
+  font-family: 'Courier New',monospace;
+  text-align: center;
+  background-color: #b3b3b3;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+
+p.bg img{
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: -1;
+  -ms-filter: blur(6px);
+  filter: blur(6px);
+}
+
+.title{
+  font-size: 50px;
+  margin-top: 50px;
+  display        : inline-block;
+  color          : #ffffff;            /* 文字の色 */
+  font-size      : 36pt;               /* 文字のサイズ */
+  letter-spacing : 4px;                /* 文字間 */
+  text-shadow    : 
+        2px  2px 9px #003366,
+      -2px  2px 9px #003366,
+        2px -2px 9px #003366,
+      -2px -2px 9px #003366,
+        2px  0px 9px #003366,
+        0px  2px 9px #003366,
+      -2px  0px 9px #003366,
+        0px -2px 9px #003366;        /* 文字の影 */
+}
+
+.target{
+  font-size: 48px;
+  letter-spacing: 3px;
+  background-color: rgb(161, 134, 255);
+  width: 700px;
+  padding: 40px;
+  border-radius: 20px;
+
+}
+
+.info{
+  display: flex;
+  flex-direction: column;
+}
